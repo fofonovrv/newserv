@@ -1,0 +1,23 @@
+#!/bin/bash
+echo -e "\033[33m Updating packages... \033[0m"
+sudo apt update -y
+
+echo "\033[33m Installing tool packages... \033[0m"
+sudo apt-get instal -y lynx net-tools nmon ctop
+
+echo "\033[33m Installing Docker... \033[0m"
+curl -fsSL test.docker.com -o get-docker.sh && sh get-docker.sh
+sudo usermod -aG docker $USER 
+
+#Activate for arm64!!!
+#export DOCKER_CLI_EXPERIMENTAL=enabled
+
+echo "\033[33m Installing pip, Docker-compose... \033[0m"
+sudo apt install -y pip
+sudo pip3 install docker-compose
+
+echo "\033[33m  \033[0m"
+
+echo "\033[33m  \033[0m"
+
+echo "\033[33m  \033[0m"
