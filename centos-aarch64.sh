@@ -17,5 +17,5 @@ sudo systemctl disable firewalld
 #Activate for arm64!!!
 export DOCKER_CLI_EXPERIMENTAL=enabled
 
-sudo dnf install -y python3 python-devel bzip2-devel libffi-devel
+sudo dnf install -y python3 python3-devel bzip2-devel libffi-devel
 sudo pip3 install docker-compose
